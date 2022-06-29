@@ -1,0 +1,51 @@
+﻿@model TeamMember
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form asp-action="create" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label asp-for="FullName" class="form-label">FullName</label>
+                    <input asp-for="FullName" class="form-control">
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Profession" class="form-label">Profession</label>
+                    <input asp-for="Profession" class="form-control">
+                    <span asp-validation-for="Profession" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Twitter" class="form-label">Twitter</label>
+                    <input asp-for="Twitter" class="form-control">
+                    <span asp-validation-for="Twitter" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Facebook" class="form-label">Facebook</label>
+                    <input asp-for="Facebook" class="form-control">
+                    <span asp-validation-for="Facebook" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Instagram" class="form-label">Instagram</label>
+                    <input asp-for="Instagram" class="form-control">
+                    <span asp-validation-for="Instagram" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Linkedin" class="form-label">Linkedin</label>
+                    <input asp-for="Linkedin" class="form-control">
+                    <span asp-validation-for="Linkedin" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ImageFile" class="form-label">ImageFile</label>
+                    <input asp-for="ImageFile" class="form-control">
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+

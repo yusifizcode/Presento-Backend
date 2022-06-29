@@ -1,0 +1,32 @@
+﻿@model TeamMember
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <div class="member-img">
+                    <img src="~/uploads/teamMembers/@Model.Image" class="img-fluid" alt="">
+                    <div class="social">
+                        <a href="@Model.Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="@Model.Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="@Model.Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="@Model.Linkedin"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h4>@Model.FullName</h4>
+                    <span>@Model.Profession</span>
+                </div>
+
+                <form asp-action="delete" method="post">
+                    <input type="hidden" asp-for="@Model.Id" />
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
